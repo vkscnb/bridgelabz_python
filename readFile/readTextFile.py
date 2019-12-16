@@ -1,3 +1,8 @@
+#**************************************************
+#@purpose :read file and stored in a linked list
+#@file    :readTextFile.py
+#@author  :Vikas Sharma
+#**************************************************
 from utility.utilMethods import is_readText
 
 openfile = open('LOOKHERE.txt', 'a+')
