@@ -1,3 +1,8 @@
+#***********************************************
+#@purpose :All funtion initialize in util method
+#@file    :utilMethods.py
+#@author  :Vikas Sharma
+#***********************************************
 import math
 import random
 
