@@ -1,3 +1,8 @@
+#***********************************************
+#@purpose :find the distance of two points
+#@file    :distanceDriver.py
+#@author  :Vikas Sharma
+#***********************************************
 from utility.utilMethods import is_distance
 
 print("enter the first points cordinates X1 and X2")
