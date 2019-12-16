@@ -1,3 +1,8 @@
+#***********************************************
+#@purpose :find prime number 
+#@file    :primeDriver.py
+#@author  :Vikas Sharma
+#***********************************************
 from utility.utilMethods import is_Prime
 
 num = int(input())
