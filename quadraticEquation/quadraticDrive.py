@@ -1,3 +1,8 @@
+#***********************************************
+#@purpose :find the quadratic equation
+#@file    :quadraticEquation.py
+#@author  :Vikas Sharma
+#***********************************************
 from utility.utilMethods import is_quadratic
 
 num1 = int(input("enter variable of power of x"))
