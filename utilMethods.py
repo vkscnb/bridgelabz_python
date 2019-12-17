@@ -292,6 +292,7 @@ def is_mergesort(arr, num):
     i = 0
     j = mid + 1
     k = low
+
     while i <= mid and j <= high:
         if (arr[i] < arr[j]):
             arr1[k].append(arr[i])
@@ -301,12 +302,14 @@ def is_mergesort(arr, num):
             arr1[k].append(arr[j])
             k += 1
             j += 1
+    
     for i in range(i, mid + 1):
         arr1[k].append(arr[i])
-        k += 1
+        k = k + 1
+    
     for j in range(j, high):
         arr1[k].append(arr[j])
-        k += 1
+        k = k + 1
     # for i in range(0,high):
     #     arr[i].append(arr1[i])
     print("merge array is ", arr1)
@@ -316,7 +319,7 @@ def is_mergesort(arr, num):
 # calculate the  temperature
 
 def is_temperature(degree, num):
-    if num == 1:
+    if num is 1:
         cels = (degree - 32) * (5 // 9)
         print("Temperature in celcius = ", cels)
     else:
@@ -327,14 +330,14 @@ def is_temperature(degree, num):
 
 # program for binary to decimal
 
-def is_bintodec(binv):
-    num = len(binv)
+def is_bintodec(binary_number):
+    num = len(binary_number)
     sum = 0
     for i in range(num-1):
-        sum = sum + (2 * int(binv[i])) ** (num-i-1)
+        sum = sum + (2 * int(binary_number[i])) ** (num-i-1)
     i = i+1
     if i is num-1:
-        if binv[i] is '0':
+        if binary_number[i] is '0':
             sum = sum + 0
         else:
             sum = sum + 1
