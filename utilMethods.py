@@ -207,7 +207,7 @@ def is_binarynum(binary_number):
 def is_bubble(bubble, size):
     for i in range(size):
         flag = 0
-        for j in (0, size - i - 1):
+        for j in range(0, size - i - 1):
             if (bubble[j] > bubble[j + 1]):
                 bubble[j], bubble[j + 1] = bubble[j + 1], bubble[j]
                 flag = 1
@@ -219,19 +219,17 @@ def is_bubble(bubble, size):
 
 # program for insertion sort
 
-def is_insertion(name_lst):
-    for i in range(1, len(name_lst)):
-        tmp = name_lst[i]
+def is_insertion(name):
+    for i in range(1, len(name)):
+        tmp = name[i]
         j = i - 1
-        check_string(tmp,j)
-    def check_string(tmp,j):
-        if (j >= 0 and name_lst[j] > tmp):
-            name_lst[j + 1] = name_lst[j]
+        while (j >= 0 and name[j] > tmp):
+            name[j + 1] = name[j]
             j = j - 1
-        name_lst[j + 1] = tmp
-        print(name_lst)
+        name[j + 1] = tmp
+        print(name)
         print()
-    return name_lst
+    return name
 
 #********************************************************
 
@@ -494,7 +492,7 @@ class LinkedList:
 
 def is_paranthesis(lst):
     
-    stack = []
+    #stack = []
     stackobj = Stack()
     
     for i in lst:
@@ -759,7 +757,6 @@ class Palindrome:
         else:
             temp = self.head
             y = []
-    
             while temp is not None:
                 print(temp.data, end="->")
                 x = temp.data
