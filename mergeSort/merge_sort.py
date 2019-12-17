@@ -8,8 +8,8 @@ from utility.utilMethods import is_mergesort
 
 lst_size = int(input("enter the size of the list"))
 arr = []
-while num>0:
-    number=int(input())
+while lst_size > 0:
+    number = int(input())
     arr.append(number)
     lst_size = lst_size-1
 print(len(arr))
