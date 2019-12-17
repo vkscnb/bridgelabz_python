@@ -125,11 +125,15 @@ def is_quadratic(a, b, c):
 # calculate the gabler win or loose
 
 def is_gambler(stake, goal, trials):
+    global wins, bets
     wins = 0
     bets = 0
-    for i in range(trials):
+    for _ in range(trials):
         cash = stake
-        while (cash > 0) and (cash < goal):
+        check_cash(cash)
+    
+    def check_cash(cash):
+        if (cash > 0) and (cash < goal):
             bets = bets + 1
             x = random.randint(0, 1)
             if x is 1:
