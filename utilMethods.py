@@ -167,7 +167,7 @@ def is_coupon(num):
 def is_windchill(temperature, velocity):
     if (temperature <= 50) and (velocity >= 3) and (velocity <= 120):
         wind = 35.74 + 0.6215 * temperature + (0.4275 * temperature - 35.75) * velocity ** 0.16
-
+        print(wind)
 #*****************************************************
 
 # calculate the sum of three pairs in a list is zero
@@ -219,17 +219,19 @@ def is_bubble(bubble, size):
 
 # program for insertion sort
 
-def is_insertion(name):
-    for i in range(1, len(name)):
-        tmp = name[i]
+def is_insertion(name_lst):
+    for i in range(1, len(name_lst)):
+        tmp = name_lst[i]
         j = i - 1
-        while (j >= 0 and name[j] > tmp):
-            name[j + 1] = name[j]
+        check_string(tmp,j)
+    def check_string(tmp,j):
+        if (j >= 0 and name_lst[j] > tmp):
+            name_lst[j + 1] = name_lst[j]
             j = j - 1
-        name[j + 1] = tmp
-        print(name)
+        name_lst[j + 1] = tmp
+        print(name_lst)
         print()
-    return name
+    return name_lst
 
 #********************************************************
 
