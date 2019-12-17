@@ -6,6 +6,7 @@
 import math
 import random
 
+# distance between two points
 
 def is_distance(x1, x2, y1, y2):
     X = (x2 - x1) ** 2
@@ -13,7 +14,9 @@ def is_distance(x1, x2, y1, y2):
     dis = math.sqrt((X + Y))
     print(dis)
 
+#***********************************************
 
+# find prime number 
 def is_Prime(num):
     count = 1
     for i in range(2, num + 1):
@@ -93,7 +96,7 @@ def is_quadratic(a, b, c):
     else:
         real = -b / (2 * a)
         imaginary = math.sqrt(-delta) / (2 * a)
-        print("Real part is =", real, "\nImaginary part is =", imaginary)
+        print("Real part is = ", real, "\nImaginary part is =", imaginary)
 
 
 def is_gambler(stake, goal, trials):
