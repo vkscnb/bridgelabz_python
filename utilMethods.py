@@ -3,6 +3,7 @@
 #@file    :utilMethods.py
 #@author  :Vikas Sharma
 #***********************************************
+
 import math
 import random
 
@@ -17,59 +18,74 @@ def is_distance(x1, x2, y1, y2):
 #***********************************************
 
 # find prime number 
+
 def is_Prime(num):
     count = 1
     for i in range(2, num + 1):
         if (num % i == 0):
             count += 1
 
-    if (count == 2):
+    if count is 2:
         return True
 
     return False
 
+#*************************************************
+
+# find prime factor
 
 def is_primeFactors(n):
     # Print the number of two's that divide n
+    
     while n % 2 == 0:
         print(2)
         n = n / 2
 
     # n must be odd at this point
     # so a skip of 2 ( i = i + 2) can be used
+    
     for i in range(3, int(math.sqrt(n)) + 1, 2):
 
         # while i divides n , print i ad divide n
+        
         while n % i == 0:
             print(i)
             n = n / i
 
             # Condition if n is a prime
     # number greater than 2
+    
     if n > 2:
         print(n)
 
+#********************************************************
+
+# create harmonic series
 
 def is_harmonic(num):
     hr = 1
     for i in range(1, num + 1):
         print(hr / i, end=" ")
-        if (i < num):
+        if i < num:
             print("+", end=" ")
 
+#**********************************************************
+
+# find the leapYeap
 
 def is_leapyear(year):
-    if (year >= 1582):
-        if (year % 400 == 0):
+    if year >= 1582 :
+        if (year % 400) is 0:
             return True
-        elif (year % 100 == 0):
+        elif (year % 100) is 0:
             return False
-        elif (year % 4 == 0):
+        elif (year % 4) is 0:
             return True
 
     else:
         return False
 
+#***********************************************************
 
 def is_flipcoin(num):
     heads = 0
