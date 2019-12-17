@@ -1,3 +1,9 @@
+#***********************************************
+#@purpose :program for bubble sort
+#@file    :bubble_sort.py
+#@author  :Vikas Sharma
+#***********************************************
+
 from utility.utilMethods import is_bubble
 
 size = int(input("enter the size of the list"))
