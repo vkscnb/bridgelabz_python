@@ -587,7 +587,9 @@ class Stack:
 
 
 def is_queue(people):
+
     queue = Queue()
+    
     for i in range(0, people):
         deposit = int(input("Enter 1 for deposite or 0 for withdraw"))
 
@@ -603,38 +605,49 @@ def is_queue(people):
 
 class Node2:
     def __init__(self,data):
+    
         self.data = data
         self.next = None
 
 class Queue:
+    
     def __init__(self):
         self.first =  None
 
 
     #insert at last
+    
     def enqueue(self,value):
         newnode = Node2(value)
+    
         if (self.first is None):
             self.first = newnode
+    
         else:
             temp = self.first
+    
             while temp.next is not None:
                 temp = temp.next
             temp.next = newnode
 
     #delete at first
+    
     def dequeue(self):
+    
         if self.first is None:
             print("queue is empty")
+    
         else:
             #temp = self.head
             self.first = self.first.next
             #temp=None
 
     def printqueue(self):
+    
         if self.first==None:
             print("queue is Empty")
         temp = self.first
+    
         while temp != None:
             print(temp.data, end="->")
             temp = temp.next
@@ -644,29 +657,37 @@ class Queue:
 # program for ordered list Assending order using linked list
 
 def is_orderList(number):
+    
     orderlist = OrderList()
-    for i in range(number):
+    
+    for _ in range(number):
         value = eval(input("enter the value to store in the linked list"))
         orderlist.Queue(value)
+    
     orderlist.printQueue()
 
 
 
 class Node3:
+
     def __init__(self,data):
         self.data = data
         self.next = None
 
 class OrderList:
+    
     def __init__(self):
         self.head = None
 
     def Queue(self,value):
         newnode = Node3(value)
+    
         if self.head is None:
             self.head = newnode
+    
         else:
             temp = self.head
+    
             while temp.data < newnode.data:
                 temp = self.head
                 self.head = temp.next
@@ -675,9 +696,11 @@ class OrderList:
             temp.next = temp1
 
     def printQueue(self):
+    
         if self.head==None:
             print("queue is Empty")
         temp = self.head
+    
         while temp != None:
             print(temp.data, end="->")
             temp = temp.next
@@ -689,17 +712,22 @@ class OrderList:
 # program for palindrome linked list
 
 def is_palindrome(str):
+    
     palindrome = Palindrome()
+    
     for i in str:
         palindrome.insertfirst(i)
     result = palindrome.printpalindrome()
     count = 0
+    
     for i in range(len(str)):
         if result[i] is  str[i]:
             count = count + 1
+    
     if count is len(str):
         print()
         print("String is palindrome")
+    
     else:
         print()
         print("String is not palindrome")
@@ -714,19 +742,24 @@ class Palindrome:
         self.head = None
 
     def insertfirst(self,val):
+    
         if self.head is None:
             self.head = Node4(val)
+    
         else:
             newnode = Node4(val)
             newnode.next = self.head
             self.head = newnode
 
     def printpalindrome(self):
+    
         if self.head is None:
             print("list is empty")
+    
         else:
             temp = self.head
             y = []
+    
             while temp is not None:
                 print(temp.data, end="->")
                 x = temp.data
