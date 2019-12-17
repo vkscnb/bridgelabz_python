@@ -128,16 +128,19 @@ def is_gambler(stake, goal, trials):
     bets = 0
     for i in range(trials):
         cash = stake
-        while (cash > 0 and cash < goal):
-            bets += 1
+        while (cash > 0) and (cash < goal):
+            bets = bets + 1
             x = random.randint(0, 1)
-            if (x == 1):
-                cash += 1
+            if x is 1:
+                cash = cash + 1
             else:
-                cash -= 1
-        if (cash == goal):
-            wins += 1
+                cash = cash - 1
+        if cash is goal:
+            wins = wins + 1
 
+#****************************************************
+
+# find the random coupon number
 
 def is_coupon(num):
     arr = []
@@ -152,10 +155,12 @@ def is_coupon(num):
     print(arr1)
     print("Distinct coupon in a coupon", len(arr1))
 
+#****************************************************
 
-def is_windchill(t, v):
-    if (t <= 50) and (v >= 3 and v <= 120):
-        wind = 35.74 + 0.6215 * t + (0.4275 * t - 35.75) * v ** 0.16
+# find the wind tw
+def is_windchill(temperature, velocity):
+    if (temperature <= 50) and (velocity >= 3 and velocity <= 120):
+        wind = 35.74 + 0.6215 * temperature + (0.4275 * temperature - 35.75) * velocity ** 0.16
 
 
 def is_add(lst, size):
