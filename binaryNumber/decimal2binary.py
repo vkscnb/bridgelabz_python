@@ -6,5 +6,5 @@
 
 from utility.utilMethods import is_binarynum
 
-binnum = int(input("enter the number to find Binary"))
-is_binarynum(binnum)
+binary_num = int(input("enter the number to find Binary"))
+is_binarynum(binary_num)
