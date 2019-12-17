@@ -87,26 +87,31 @@ def is_leapyear(year):
 
 #***********************************************************
 
+# find the percentage of flip coin(head and tails)
+
 def is_flipcoin(num):
     heads = 0
     tails = 0
     for i in range(1, num + 1):
         flip = random.randint(0, 1)
-        if (flip == 0):
-            heads += 1
+        if flip is 0:
+            heads = heads + 1
         else:
-            tails += 1
+            tails = tails + 1
     print("percentage of heads= ", (heads / num) * 100)
     print("percentage of tails= ", (tails / num) * 100)
 
+#*************************************************************
 
+# find the quadratic equation
+ 
 def is_quadratic(a, b, c):
     delta = b ** 2 - (4 * a * c)
-    if (delta > 0):
+    if delta > 0 :
         root1 = (-b + math.sqrt(delta)) / (2 * a)
         root2 = (-b - math.sqrt(delta)) / (2 * a)
         print("root1 is =", root1, " root2 is = ", root2)
-    elif (delta == 0):
+    elif delta is 0:
         root1 = root2 = -b / (2 * a)
         print("root1 and root2 are same= ", root1)
     else:
@@ -114,6 +119,9 @@ def is_quadratic(a, b, c):
         imaginary = math.sqrt(-delta) / (2 * a)
         print("Real part is = ", real, "\nImaginary part is =", imaginary)
 
+#**************************************************************
+
+# calculate the gabler win or loose
 
 def is_gambler(stake, goal, trials):
     wins = 0
