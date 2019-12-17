@@ -391,7 +391,7 @@ def is_readText(path):
         insert_list(line)
     
     def insert_list(line):
-        
+
         for i in line.split():
             lst2.append(i)
     print(lst)
@@ -403,10 +403,14 @@ def is_readText(path):
 
     print("List after spliting", lst2)
     word = input("enter the word to search in file")
+
     if word in lst2:
+
         lst2.remove(word)
         linkedList.deleteposition(word)
+    
     else:
+
         lst2.append(word)
         linkedList.insert(word)
 
@@ -426,26 +430,35 @@ class LinkedList:
 
     def insertlast(self,value):
         newnode = Node(value)
+    
         if(self.start is None):
             self.start = newnode
+    
         else:
             temp = self.start
+    
             while temp.next is None:
                 temp = temp.next
+    
             temp.next = newnode
 
     def printList(self):
+    
         if self.start is None:
             print("list is empty")
+    
         else:
             temp = self.start
+    
             while temp is not None:
                 print(temp.data, end=" ")
                 temp = temp.next
 
     def deleteFirst(self):
+    
         if self.start == None:
             print("list is empty")
+    
         else:
             self.start = self.start.next
 
@@ -453,12 +466,16 @@ class LinkedList:
 
     def deleteposition(self,key):
         temp = self.start
+    
         if temp is not None:
+    
             if temp.data == key:
                 self.start = temp.next
                 temp = None
                 return
+    
         while(temp is not None):
+    
             if temp.data is key:
                 break
             prev = temp
@@ -476,24 +493,31 @@ class LinkedList:
 # calculate the parenthesis are equal or not in stack
 
 def is_paranthesis(lst):
+    
     stack = []
     stackobj = Stack()
+    
     for i in lst:
+    
         if i is '(' or i is '{' or i is '[':
             stackobj.push(i)
             stackobj.printstack()
+    
         elif i is ')' or i is '}' or i is ']':
             stackobj.pop()
             #stackobj.printstack()
 
     cunt = stackobj.size()
+    
     if cunt is 0:
         print("Paranthesis are equal")
+    
     else:
         print("Paranthesis are not equal")
     #
     # topelement=stackobj.top()
     # print("top element= ",topelement)
+    
     result = stackobj.isEmpty()
     print("stack is empty = ", result)
 
@@ -508,16 +532,21 @@ class Stack:
 
     # insert at first
     def push(self,data):
+    
         if self.head is None:
             self.head = Node1(data)
+    
         else:
             newnode = Node1(data)
             newnode.next = self.head
             self.head = newnode
+    
     # delete  at first
     def pop(self):
+    
         if self.head is None:
             return None
+    
         else:
             temp = self.head
             self.head = self.head.next
@@ -527,21 +556,27 @@ class Stack:
     #     return self.head.data
 
     def size(self):
+    
         temp = self.head
         count = 0
+    
         while temp is not None:
             count = count + 1
             temp = temp.next
         return count
 
     def isEmpty(self):
+    
         if self.head is None:
             return True
+    
         else:
             return False
 
     def printstack(self):
+    
         temp = self.head
+    
         while temp is not None:
             print(temp.data, end="->")
             temp = temp.next
