@@ -361,14 +361,19 @@ def is_anagram(str1,str2):
     x = sorted(str1)
     y = sorted(str2)
     count=0
+
     if(str1len is str2len):
+
         for i in range(0,str1len):
             if x[i] is y[i]:
                 count = count + 1
+
         if count is str1len:
             print("String is Anagram")
+
         else:
             print("String is not Anagram")
+
     else:
         print("string not Anagram******")
 
@@ -380,8 +385,13 @@ def is_readText(path):
     data = open(path,"r")
     lst=[]
     lst2 = []
+
     for line in data.readlines():
         lst.append([line])
+        insert_list(line)
+    
+    def insert_list(line):
+        
         for i in line.split():
             lst2.append(i)
     print(lst)
