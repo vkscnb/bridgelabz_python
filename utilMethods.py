@@ -34,29 +34,30 @@ def is_Prime(num):
 
 # find prime factor
 
-def is_primeFactors(n):
+def is_primeFactors(number):
     # Print the number of two's that divide n
     
-    while n % 2 == 0:
+    while number % 2 == 0:
         print(2)
-        n = n / 2
+        number = number / 2
 
     # n must be odd at this point
     # so a skip of 2 ( i = i + 2) can be used
     
-    for i in range(3, int(math.sqrt(n)) + 1, 2):
-
+    for divisor in range(3, int(math.sqrt(number)) + 1, 2):
+        divisor_other(number,divisor)
         # while i divides n , print i ad divide n
-        
-        while n % i == 0:
-            print(i)
-            n = n / i
+
+    def divisor_other(number,divisor):    
+        while number % divisor == 0:
+            print(divisor)
+            number = number / divisor
 
             # Condition if n is a prime
     # number greater than 2
     
-    if n > 2:
-        print(n)
+    if number > 2:
+        print(number)
 
 #********************************************************
 
@@ -89,17 +90,17 @@ def is_leapyear(year):
 
 # find the percentage of flip coin(head and tails)
 
-def is_flipcoin(num):
+def is_flipcoin(number):
     heads = 0
     tails = 0
-    for i in range(1, num + 1):
+    for num in range(1, number + 1):
         flip = random.randint(0, 1)
         if flip is 0:
             heads = heads + 1
         else:
             tails = tails + 1
-    print("percentage of heads= ", (heads / num) * 100)
-    print("percentage of tails= ", (tails / num) * 100)
+    print("percentage of heads= ", (heads / number) * 100)
+    print("percentage of tails= ", (tails / number) * 100)
 
 #*************************************************************
 
