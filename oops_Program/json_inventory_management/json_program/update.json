@@ -1,0 +1,73 @@
+{
+    "Rice": [
+        {
+            "name": "Polished",
+            "weight": 10,
+            "price_per_kg": 100
+        },
+        {
+            "name": "Brown",
+            "weight": 5,
+            "price_per_kg": 80
+        },
+        {
+            "name": "Basmati",
+            "weight": 8,
+            "price_per_kg": 120
+        },
+        {
+            "name": "Jasmine",
+            "weight": 6,
+            "price_per_kg": 110
+        }
+    ],
+    "Pulses": [
+        {
+            "name": "Green Gram",
+            "weight": 4,
+            "price_per_kg": 125
+        },
+        {
+            "name": "Lentil",
+            "weight": 7,
+            "price_per_kg": 90
+        },
+        {
+            "name": "Red Gram",
+            "weight": 9,
+            "price_per_kg": 150
+        },
+        {
+            "name": "Black lentils",
+            "weight": 3,
+            "price_per_kg": 80
+        },
+        {
+            "name": "Chickpeas",
+            "weight": 10,
+            "price_per_kg": 120
+        }
+    ],
+    "Wheat": [
+        {
+            "name": "polished wheat",
+            "weight": 20,
+            "price_per_kg": 30
+        },
+        {
+            "name": "plain wheat",
+            "weight": 30,
+            "price_per_kg": 45
+        },
+        {
+            "name": "black wheat",
+            "weight": 40,
+            "price_per_kg": 50
+        },
+        {
+            "name": "Forbidden wheat",
+            "weight": 5,
+            "price_per_kg": 25
+        }
+    ]
+}
