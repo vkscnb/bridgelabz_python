@@ -120,7 +120,7 @@ def is_quadratic(a, b, c):
         imaginary = math.sqrt(-delta) / (2 * a)
         print("Real part is = ", real, "\nImaginary part is =", imaginary)
 
-#**************************************************************
+#**************************************************************************
 
 # calculate the gabler win or loose
 
