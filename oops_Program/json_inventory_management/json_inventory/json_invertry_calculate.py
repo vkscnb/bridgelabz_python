@@ -4,44 +4,42 @@
 #@author: Vikas Sharma
 #*************************************************************************
 
-import json
+try:
+    import json
+except ImportError:
+    print("import error")
 
 def calculate_json_inventory():
     
     with open("/home/user/Videos/test/bridgelabz_python/oops_Program/json_inventory_management/json_program/inventry.json","r") as file:
         inventry_data = json.load(file)
-        print(inventry_data)
-    global rice_price , pulses_price , wheat_price 
+
+        wheat_arr = inventry_data['Wheat']
+        rice_arr = inventry_data['Rice']
+        pulses_arr = inventry_data['Pulses']
+
     rice_price = 0
     pulses_price = 0
     wheat_price = 0
+    try:
 
-    def Price_rice(key):
-        for price in key:
-            rice_price = rice_price + price["price_per_kg"]
+        for rice_item_dict in rice_arr:  
+            rice_price = rice_price + rice_item_dict["price_per_kg"]
+        
 
-    def Price_pulses(key):
-        for price in key:
-            pulses_price = pulses_price + price["price_per_kg"]
+        for pulses_item_dict in pulses_arr:  
+            pulses_price = pulses_price + pulses_item_dict["price_per_kg"]
+        
 
+        for wheat_item_dict in wheat_arr:
+            wheat_price = wheat_price + wheat_item_dict["price_per_kg"]       
 
-    def Price_wheat(key):
-        for price in key:
-            wheat_price = wheat_price + price["price_per_kg"]
+    except TypeError:
+        
+        print("type error")
 
-    for key in inventry_data["Rice"]:
-        print(key)
-        Price_rice(key) 
-
-    for key in inventry_data["Pulses"]:
-        print(key)   
-        Price_pulses(key)
-
-    for key in inventry_data["Wheat"]:
-        print(key)
-        Price_wheat(key)
-
-    print("price of rice : {} \n price of pulses : {} \n price of wheat : {}".format(rice_price,pulses_price,wheat_price))
+        print("price of rice : {} \nprice of pulses : {} \nprice of wheat : {}".format(rice_price,pulses_price,wheat_price))
 
 if __name__ == "__main__":
     calculate_json_inventory()
+    
