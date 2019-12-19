@@ -8,7 +8,7 @@ import json
 
 class InventoryManagement: 
 
-    def calculate_json_inventory(self):
+    def calculate_inventory_price(self):
         
         with open("/home/user/Videos/test/bridgelabz_python/oops_Program/json_inventory_management/json_program/inventry.json","r") as file:
             inventry_data = json.load(file)
@@ -42,5 +42,5 @@ class InventoryManagement:
         print(json_string)
 
 obj = InventoryManagement()
-obj.calculate_json_inventory()    
+obj.calculate_inventory_price()    
     
