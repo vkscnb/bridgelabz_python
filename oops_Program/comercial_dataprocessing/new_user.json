@@ -1,0 +1,55 @@
+ [{    "customerId" : "1",
+       "name" : "vikas",
+       "age"  : "25",
+       "Ph.No" : "6394308530",
+       "share_amount" : "10",
+       "product"  : "5"
+             }]
+ [{    "customerId" : "1",
+       "name" : "vikas",
+       "age"  : "25",
+       "Ph.No" : "567654564",
+       "share_amount" : "5" ,      
+       "product"  : "2"
+             }]
+ [{    "customerId" : "1",
+       "name" : "vikas",
+       "age"  : "25",
+       "Ph.No" : "3694308530",
+       "share_amount" : "60",       
+       "product"  : "5"
+             }]
+ [{    "customerId" : "2",
+       "name" : "sharma",
+       "age"  : "26",
+       "Ph.No" : "7309443545",
+       "share_amount" : "4", 
+       "product"  : "1"
+             }]
+ [{    "customerId" : "3",
+       "name" : "suvi",
+       "age"  : "26",
+       "Ph.No" : "8486793965",
+       "share_amount" : "2" ,      
+       "product"  : "4"
+             }]
+ [{    "customerId" : "5",
+       "name" : "shalinee",
+       "age"  : "23",
+       "Ph.No" : "2565412464",
+       "share_amount" : "6",       
+       "product"  : "45"
+             }]
+ [{    "customerId" : "6",
+       "name" : "gursheesh",
+       "age"  : "32",
+       "Ph.No" : "1245365952",
+       "share_amount" : "485",       
+       "product"  : "6"
+             }]
+ [{    "customerId" : "7",
+       "name" : "subheshya",
+       "age"  : "26",
+       "Ph.No" : "2654156393",
+       "share_amount" : "6396"       "product"  : "4",
+             }]
