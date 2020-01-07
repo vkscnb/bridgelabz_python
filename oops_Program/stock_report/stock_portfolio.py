@@ -16,9 +16,9 @@ class Stock_Portfolio:
 
         #itrating total price & shares & stock price of the Stock_report
         for item in data:
-            total_number_of_share = total_number_of_share+item["number_of_share"]
-            total_share_price = total_share_price+item["share_price"]
-            total_stock_price = total_stock_price+item["stock_price"]
+            total_number_of_share = total_number_of_share + item["number_of_share"]
+            total_share_price = total_share_price + item["share_price"]
+            total_stock_price = total_stock_price + item["stock_price"]
 
         print("total number_of_share :",total_number_of_share)
         print("total share_price :",total_share_price)
