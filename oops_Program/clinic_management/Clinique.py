@@ -32,13 +32,13 @@ class Search:
                     #fetching doctor details based on given id
                     print("Doctor",data["name"],data["specialization"],"specialist", "Availability Time:",data["availability"])
                 else:
-                    f = open("doctor.json","a+")
-                    def search(self):
-                        contactNumber = input("Enter your Mobile Number: ")
-                        availability = input("Enter the availability time: ")
-                        cont = f.write(' [{'+'    "name" : "'+ name +'",\n' + '       "id" : "'+ id +'",\n' + '       "specialization"  : "'+str(specialization)+'",\n'+'       "contactNumber" : "'+str(contactNumber)+'",\n'+'       "availability" : "'+str(availability)+'"    }]\n')
+                    f = open("/home/user/Videos/test/bridgelabz_python/oops_Program/clinic_management/new_doctor.json","a+")
+                    #def search(self):
+                    contactNumber = input("Enter your Mobile Number: ")
+                    availability = input("Enter the availability time: ")
+                    cont = f.write(' [{'+'    "name" : "'+ name +'",\n' + '       "id" : "'+ id +'",\n' + '       "specialization"  : "'+str(specialization)+'",\n'+'       "contactNumber" : "'+str(contactNumber)+'",\n'+'       "availability" : "'+str(availability)+'"    }]\n')
                         #entring new doctor details based on requirment
-                        print("The Data has been Stored Successfully in 'new_doctor.json' file. ")
+                    print("The Data has been Stored Successfully in 'new_doctor.json' file. ")
         elif(select == "p") or (select == "P"):
             try:
                 f = open("/home/user/Videos/test/bridgelabz_python/oops_Program/clinic_management/json_file.json","r")
@@ -55,13 +55,13 @@ class Search:
                     #fetching patients name based on given name
                     print("Patient Name:",data["name"],"Patient Gender:",data["gender"], "Patient Age:",data["age"])
                 else:
-                    f = open("new_patients.json","a+")
-                    def search(self):
-                        weight = input("Enter yor weight: ")
-                        height = input("Enter yor height: ")
-                        cont = f.write(' [{'+'    "name" : "'+ name +'",\n' + '       "id" : "'+ id +'",\n' + '       "gender" : "'+str(gender)+'",\n'+'       "age" : "'+str(age)+'",\n'+'       "profession"  : "'+str(profession)+'",\n'+'       "weight" : "'+weight+'",\n'+'       "height" : "'+height+'"  }]\n' )
+                    f = open("/home/user/Videos/test/bridgelabz_python/oops_Program/clinic_management/new_patients.json","a+")
+                    #def search(self):
+                    weight = input("Enter yor weight: ")
+                    height = input("Enter yor height: ")
+                    cont = f.write(' [{'+'    "name" : "'+ name +'",\n' + '       "id" : "'+ id +'",\n' + '       "gender" : "'+str(gender)+'",\n'+'       "age" : "'+str(age)+'",\n'+'       "profession"  : "'+str(profession)+'",\n'+'       "weight" : "'+weight+'",\n'+'       "height" : "'+height+'"  }]\n' )
                     #adding new patients 
-                        print("The Data has been Stored Successfully in 'new_patient.json' file. ")
+                    print("The Data has been Stored Successfully in 'new_patient.json' file.")
 
-find=Search()
+find = Search()
 find.search()
