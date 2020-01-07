@@ -1,6 +1,6 @@
 #*****************************************************
 # @purpose :Read the Json File.
-# @file  :inventoryfactor.py
+# @file  :inventormanager.py
 # @author :Vikas Sharma
 #*****************************************************
 
