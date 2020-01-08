@@ -30,7 +30,7 @@ class Search:
             for data in data_key["Doctors"]:
                 if data["specialization"] == specialization:
                     #fetching doctor details based on given id
-                    print("Doctor",data["name"],data["specialization"],"specialist", "Availability Time:",data["availability"])
+                    print("Doctor",data["name"],data["specialization"],data["id"],data["contactNumber"],data["availability"])
                 else:
                     f = open("/home/user/Videos/test/bridgelabz_python/oops_Program/clinic_management/new_doctor.json","a+")
                     #def search(self):
