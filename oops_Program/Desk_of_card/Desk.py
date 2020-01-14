@@ -58,7 +58,7 @@ class Deck(object):
                 self.cards.append(Card(suit, rank))
 
     # Shuffle the deck
-    def shuffle(self, num=1):
+    def shuffle(self, num = 1):
         length = len(self.cards)
         for _ in range(num):
             # This is the fisher yates shuffle algorithm
@@ -84,7 +84,7 @@ class Player(object):
 
     # Draw n number of cards from a deck
     # Returns true in n cards are drawn, false if less then that
-    def draw(self, deck, num=1):
+    def draw(self, deck, num = 1):
         for _ in range(num):
             card = deck.deal()
             if card:
