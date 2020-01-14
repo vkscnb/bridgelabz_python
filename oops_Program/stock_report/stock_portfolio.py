@@ -26,7 +26,7 @@ class Stock_Portfolio:
        
     def eachdata(self,data):
 
-        each_price=0
+        each_price = 0
 
         #itrating each item_price & shares_price of the Stock_report
         for item in data:

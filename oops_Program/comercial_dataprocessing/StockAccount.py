@@ -10,6 +10,7 @@ except ImportError:
     print("import error")
 
 #Executing as main program
+
 if __name__ == '__main__' :
     inp = input(" Are having an Existing Account? (y/n):")
     if (inp == "y") or (inp == "Y"):
@@ -33,7 +34,7 @@ if __name__ == '__main__' :
                 data["product"] += product_quantity  
                 
                 #taking money from user
-                amount=int(input("enter amount")) 
+                amount = int(input("enter amount")) 
                 data["share_amount"] -= amount 
                 
                 #updating customer data
@@ -71,17 +72,17 @@ class StockAccount:
         if type == 0:
             for data in data_key["Shares"]:
                 if data['share'] == "Production":
-                    input_amount=int(input("enter amount"))  
+                    input_amount = int(input("enter amount"))  
                     data['amount'] += input_amount
-                    input_stock=int(input("enter stock"))  
-                    data['stock']-=input_stock
+                    input_stock = int(input("enter stock"))  
+                    data['stock'] -= input_stock
                     with open('/home/user/Videos/test/bridgelabz_python/oops_Program/comercial_dataprocessing/company_shares.json', '+w') as json_file:
                         json.dump(data_key, json_file, indent = 4)
         if type == 1:
             for data in data_key["Shares"]:
-                print("hello")
+                #print("hello")
                 if data['share'] == "Sales": 
-                    input_amount=int(input("enter amount"))
+                    input_amount = int(input("enter amount"))
                     data['amount'] -= input_amount
                     with open('/home/user/Videos/test/bridgelabz_python/oops_Program/comercial_dataprocessing/company_shares.json', '+w') as json_file:
                         json.dump(data_key, json_file, indent = 4)
