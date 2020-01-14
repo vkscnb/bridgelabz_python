@@ -60,7 +60,7 @@ class Search:
                     weight = input("Enter yor weight: ")
                     height = input("Enter yor height: ")
                     cont = f.write(' [{'+'    "name" : "'+ name +'",\n' + '       "id" : "'+ id +'",\n' + '       "gender" : "'+str(gender)+'",\n'+'       "age" : "'+str(age)+'",\n'+'       "profession"  : "'+str(profession)+'",\n'+'       "weight" : "'+weight+'",\n'+'       "height" : "'+height+'"  }]\n' )
-                    #adding new patients 
+                    
                     print("The Data has been Stored Successfully in 'new_patient.json' file.")
 
 find = Search()
